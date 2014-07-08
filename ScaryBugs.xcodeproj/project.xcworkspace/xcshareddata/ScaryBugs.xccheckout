@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF6F808D-F6C2-4750-B869-B8B9BB0E072F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScaryBugs</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5F1DD784-A76E-420D-A922-C940483D4A36</key>
+		<string>https://github.com/kevin-moy/scary_bugs_app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScaryBugs.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5F1DD784-A76E-420D-A922-C940483D4A36</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kevin-moy/scary_bugs_app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5F1DD784-A76E-420D-A922-C940483D4A36</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5F1DD784-A76E-420D-A922-C940483D4A36</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScaryBugs</string>
+		</dict>
+	</array>
+</dict>
+</plist>
