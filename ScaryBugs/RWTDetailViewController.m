@@ -10,7 +10,7 @@
 #import "RWTScaryBugDoc.h"
 #import "RWTScaryBugData.h"
 #import "RWTUIImageExtras.h"
-
+#import "SVProgressHUD.h"
 
 
 @interface RWTDetailViewController ()
@@ -74,12 +74,27 @@
 {
     if (self.picker == nil)
     {
+        // Show status
+        [SVProgressHUD showWithStatus:@"Loading picker"];
+        // Get concurrent queue from system
+        dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        // Load picker in background
+        dispatch_async(concurrentQueue, ^{
         self.picker = [[UIImagePickerController alloc] init];
         self.picker.delegate = self;
         self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         self.picker.allowsEditing = NO;
+            
+        //Present Picker in main thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:_picker animated:YES completion:nil];
+                [SVProgressHUD dismiss];
+            });
+        });
     }
-    [self presentViewController:_picker animated:YES completion:nil];
+    else {
+        [self presentViewController:_picker animated:YES completion:nil];
+    }
 }
 
 #pragma mark UIImagePIckerControllerDelegate
@@ -90,13 +105,26 @@
 }
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
     UIImage *fullImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [SVProgressHUD showWithStatus:@"Resizing Image"];
+    
+    // Get concurrent queue from system
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    // resize image in background
+    dispatch_async(concurrentQueue, ^{
     UIImage *thumbImage = [fullImage imageByScalingAndCroppingForSize:CGSizeMake(44, 44)];
-                           
+   
+    // Present Image
+    dispatch_async(dispatch_get_main_queue(), ^{
     self.detailItem.fullImage = fullImage;
     self.detailItem.thumbImage = thumbImage;
     self.imageView.image = fullImage;
+        [SVProgressHUD dismiss];
+        });
+    });
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)titleFieldTextChanged:(id)sender
 {

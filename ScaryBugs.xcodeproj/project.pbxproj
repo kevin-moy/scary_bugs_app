@@ -32,6 +32,8 @@
 		479DA76319466A33002112B6 /* potatoBugThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 479DA75B19466A33002112B6 /* potatoBugThumb.jpg */; };
 		479DA76419466A33002112B6 /* wolfSpider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 479DA75C19466A33002112B6 /* wolfSpider.jpg */; };
 		479DA76519466A33002112B6 /* wolfSpiderThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 479DA75D19466A33002112B6 /* wolfSpiderThumb.jpg */; };
+		47A045E21974B1F900A95C2A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A045E11974B1F900A95C2A /* SVProgressHUD.m */; };
+		47A045E41974B21300A95C2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A045E31974B21300A95C2A /* QuartzCore.framework */; };
 		47F086C2196C98B3002864D3 /* RWTRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F086C1196C98B3002864D3 /* RWTRateView.m */; };
 		47F086C5196C98D0002864D3 /* RWTUIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F086C4196C98D0002864D3 /* RWTUIImageExtras.m */; };
 		47F086C9196C98E1002864D3 /* shockedface2_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 47F086C6196C98E1002864D3 /* shockedface2_empty.png */; };
@@ -84,6 +86,9 @@
 		479DA75B19466A33002112B6 /* potatoBugThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = potatoBugThumb.jpg; path = ../potatoBugThumb.jpg; sourceTree = "<group>"; };
 		479DA75C19466A33002112B6 /* wolfSpider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wolfSpider.jpg; path = ../wolfSpider.jpg; sourceTree = "<group>"; };
 		479DA75D19466A33002112B6 /* wolfSpiderThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wolfSpiderThumb.jpg; path = ../wolfSpiderThumb.jpg; sourceTree = "<group>"; };
+		47A045E01974B1F900A95C2A /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		47A045E11974B1F900A95C2A /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		47A045E31974B21300A95C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		47F086C0196C98B3002864D3 /* RWTRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTRateView.h; sourceTree = "<group>"; };
 		47F086C1196C98B3002864D3 /* RWTRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTRateView.m; sourceTree = "<group>"; };
 		47F086C3196C98D0002864D3 /* RWTUIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTUIImageExtras.h; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A045E41974B21300A95C2A /* QuartzCore.framework in Frameworks */,
 				479DA71919466016002112B6 /* CoreGraphics.framework in Frameworks */,
 				479DA71B19466016002112B6 /* UIKit.framework in Frameworks */,
 				479DA71719466016002112B6 /* Foundation.framework in Frameworks */,
@@ -134,6 +140,8 @@
 			children = (
 				47F086C0196C98B3002864D3 /* RWTRateView.h */,
 				47F086C1196C98B3002864D3 /* RWTRateView.m */,
+				47A045E01974B1F900A95C2A /* SVProgressHUD.h */,
+				47A045E11974B1F900A95C2A /* SVProgressHUD.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 		479DA71519466016002112B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47A045E31974B21300A95C2A /* QuartzCore.framework */,
 				479DA71619466016002112B6 /* Foundation.framework */,
 				479DA71819466016002112B6 /* CoreGraphics.framework */,
 				479DA71A19466016002112B6 /* UIKit.framework */,
@@ -368,6 +377,7 @@
 				47F086C5196C98D0002864D3 /* RWTUIImageExtras.m in Sources */,
 				479DA72719466016002112B6 /* RWTAppDelegate.m in Sources */,
 				479DA7551946650D002112B6 /* RWTScaryBugDoc.m in Sources */,
+				47A045E21974B1F900A95C2A /* SVProgressHUD.m in Sources */,
 				479DA72319466016002112B6 /* main.m in Sources */,
 				479DA72D19466016002112B6 /* RWTMasterViewController.m in Sources */,
 				479DA73019466016002112B6 /* RWTDetailViewController.m in Sources */,
